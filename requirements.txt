@@ -1,0 +1,12 @@
+# QuickDraw_IA dependencies (lower bounds only, so Colab's preinstalled versions are kept).
+# torch: on Colab the preinstalled CUDA build is used (do not reinstall it). Locally on Windows,
+# CPU wheels: pip install torch --index-url https://download.pytorch.org/whl/cpu
+torch>=2.1
+numpy
+# opencv-python-headless is also fine (same `cv2` module, no GUI); the webcam game needs the GUI build.
+opencv-python
+matplotlib
+tqdm
+requests
+pytest
+nbformat
