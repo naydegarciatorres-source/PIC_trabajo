@@ -8,7 +8,4 @@ numpy
 # detección de la mano (hand_detection.py); instala también opencv-contrib-python,
 # que incluye las ventanas de OpenCV (no instalar además opencv-python)
 mediapipe
-# usados por preprocess.py para descargar datos de Quick, Draw!
-requests
-tqdm
 pytest
