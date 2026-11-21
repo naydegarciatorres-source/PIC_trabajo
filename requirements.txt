@@ -1,11 +1,17 @@
-# Clasificador BEiT-sketch (beit_classifier.py + preprocess.py) y prueba con webcam
+# Dependencias del proyecto (rama de integración visión + IA)
+#
+# Clasificador BEiT-sketch (beit_classifier.py, preprocess.py)
 # torch: en Windows sin GPU NVIDIA basta la versión CPU:
 #   pip install torch --index-url https://download.pytorch.org/whl/cpu
 # (>=2.6 porque transformers lo exige para cargar los pesos .bin de BEiT)
 torch>=2.6
 transformers>=4.40
 numpy
-# detección de la mano (hand_detection.py); instala también opencv-contrib-python,
-# que incluye las ventanas de OpenCV (no instalar además opencv-python)
+#
+# Detección de la mano y lienzo (hand_detection.py): mediapipe instala también
+# opencv-contrib-python, que incluye las ventanas de OpenCV (cv2.imshow).
+# No instalar además opencv-python ni opencv-python-headless (chocan entre sí).
 mediapipe
+#
+# Tests automáticos
 pytest
