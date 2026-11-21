@@ -10,6 +10,10 @@ Uso desde otro archivo:
     if imagen is None:
         ...  # el usuario cerró la ventana sin terminar el dibujo
 
+    # También los trazos originales, en píxeles del lienzo (para el clasificador BEiT):
+    imagen, trazos = capturar_dibujo(devolver_trazos=True)
+    # trazos = [[(x, y), (x, y), ...], [(x, y), ...], ...]  -> (None, []) si se cancela
+
 Gestos:
     - Puño izquierdo cerrado + índice derecho  -> dibujar
     - Puño izquierdo cerrado + palma derecha abierta ~1 s -> borrar todo
@@ -215,7 +219,7 @@ def preparar_salida(imagen_bgr, tamano=None, recortar=False, escala_grises=True,
     return img
 
 
-def capturar_dibujo(tamano=None, recortar=False, escala_grises=True, camara=0):
+def capturar_dibujo(tamano=None, recortar=False, escala_grises=True, camara=0, devolver_trazos=False):
     """
     Abre la cámara para dibujar con gestos y espera a que se haga el 👍 con la mano izquierda.
 
@@ -225,10 +229,15 @@ def capturar_dibujo(tamano=None, recortar=False, escala_grises=True, camara=0):
         recortar: True = recorta la imagen al dibujo (cuadrado con margen) antes de redimensionar.
         escala_grises: True = devuelve (alto, ancho); False = devuelve BGR (alto, ancho, 3).
         camara: índice de la cámara para cv2.VideoCapture.
+        devolver_trazos: True = devuelve también los trazos (ver abajo).
 
     Devuelve:
         np.ndarray uint8 con fondo blanco (255) y trazo negro (0),
         o None si se cancela ('q' o cerrar una ventana) antes de terminar el dibujo.
+        Con devolver_trazos=True devuelve la tupla (imagen, trazos): trazos es una lista de
+        trazos en el orden en que se dibujaron, y cada trazo una lista de puntos (x, y) en
+        píxeles del lienzo a tamaño completo (sin recortar ni redimensionar), los mismos con los
+        que se pinta la imagen. Si se cancela, devuelve (None, []).
     """
     options = vision.HandLandmarkerOptions(
         base_options=python.BaseOptions(model_asset_path=RUTA_MODELO),
@@ -252,6 +261,7 @@ def capturar_dibujo(tamano=None, recortar=False, escala_grises=True, camara=0):
     frames_okay = 0
     frames_borrar = 0
     resultado = None
+    trazos_px = []
 
     try:
         while True:
@@ -387,6 +397,8 @@ def capturar_dibujo(tamano=None, recortar=False, escala_grises=True, camara=0):
                 # Se guarda la imagen limpia (sin cursor ni textos) y se enseña la confirmación un momento
                 lienzo.cerrar_trazo()
                 resultado = preparar_salida(lienzo.imagen, tamano, recortar, escala_grises)
+                # Trazos originales (normalizados 0-1) -> píxeles del lienzo
+                trazos_px = [[(x * w, y * h) for x, y in trazo] for trazo in lienzo.trazos]
                 cv2.putText(vista_lienzo, "Dibujo terminado", (20, 40),
                             cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 150, 0), 2)
                 cv2.imshow(VENTANA_LIENZO, vista_lienzo)
@@ -407,6 +419,8 @@ def capturar_dibujo(tamano=None, recortar=False, escala_grises=True, camara=0):
         cv2.waitKey(1)  # en Windows hace falta para que las ventanas se cierren de verdad
         landmarker.close()
 
+    if devolver_trazos:
+        return resultado, (trazos_px if resultado is not None else [])
     return resultado
 
 
