@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Data (downloaded / generated, can be several GB)
+data/
+!data/.gitkeep
+
+# Model weights (large); share via Google Drive / GitHub Releases instead
+checkpoints/
+*.pt
+*.pth
+
+# Results: keep metrics/plots, ignore heavy artefacts
+results/**/*.npy
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Pesos de BEiT descargados en local y dibujos guardados por test_webcam_beit.py
+weights/
+dibujos_webcam.ndjson

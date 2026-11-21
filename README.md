@@ -25,3 +25,16 @@ Por último, predice la respuesta y la devuelve con su porcentaje de confianza.
 Será el búcle que se encargará de implementar los otros dos modulos y se gestionará la parte del control de voz:
 - Módulo TTS con pyttsx3 
 - Módulo STT con SpeechRecognition 
+
+## INSTALACIÓN Y PRUEBA (visión + clasificador BEiT)
+```
+python -m venv .venv
+.venv\Scripts\python.exe -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+.venv\Scripts\python.exe -m pytest tests
+.venv\Scripts\python.exe test_webcam_beit.py
+```
+- `hand_detection.py`: `capturar_dibujo(devolver_trazos=True)` devuelve `(imagen, trazos)`; los trazos van en píxeles del lienzo.
+- `beit_classifier.py`: `BeitClassifier().predict_strokes(trazos)` o `.predict(imagen)` devuelve el top-3 de las 345 categorías de Quick, Draw! con su probabilidad. Clasificar por trazos es más preciso que por imagen.
+- La primera vez, los pesos de BEiT (`kmewhort/beit-sketch-classifier`, unos 348 MB) se descargan solos de Hugging Face. Para usar una copia local: variable de entorno `BEIT_SKETCH_MODEL` o carpeta `weights/beit-sketch-classifier/`.
+- Gestos: puño izquierdo + índice derecho = dibujar · puño izquierdo + palma derecha 1 s = borrar · pulgar arriba izquierdo = terminar · `q` = salir.
