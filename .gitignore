@@ -26,3 +26,7 @@ results/**/*.npy
 Thumbs.db
 .vscode/
 .idea/
+
+# Pesos de BEiT descargados en local y dibujos guardados por test_webcam_beit.py
+weights/
+dibujos_webcam.ndjson
