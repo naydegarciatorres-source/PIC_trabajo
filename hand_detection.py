@@ -89,7 +89,7 @@ HAND_CONNECTIONS = [
 INVERTIR = {"Left": "Right", "Right": "Left"}
 indice_id = 8
 
-RUTA_MODELO = r"C:\hand_models\hand_landmarker.task"
+RUTA_MODELO = os.path.join(os.path.dirname(os.path.abspath(__file__)), "hand_landmarker.task")
 COLOR_TRAZO = (0, 0, 0)
 GROSOR_TRAZO = 5
 FRAMES_PARA_BAJAR_LAPIZ = 3

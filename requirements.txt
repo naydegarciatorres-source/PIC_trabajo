@@ -15,3 +15,11 @@ mediapipe
 #
 # Tests automáticos
 pytest
+#
+# Voz (reconocimiento_voz_IA.py, reconocimiento_voz_usuario.py)
+pyttsx3
+SpeechRecognition
+PyAudio
+#
+# Interfaz gráfica (interfaz.py)
+pygame
