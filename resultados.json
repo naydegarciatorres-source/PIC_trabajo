@@ -1,0 +1,362 @@
+[
+  {
+    "palabra": "apple",
+    "prediccion": "apple",
+    "confianza": 99.7,
+    "acierto": true
+  },
+  {
+    "palabra": "car",
+    "prediccion": "car",
+    "confianza": 86.2,
+    "acierto": true
+  },
+  {
+    "palabra": "cat",
+    "prediccion": "cat",
+    "confianza": 98.5,
+    "acierto": true
+  },
+  {
+    "palabra": "tree",
+    "prediccion": "broccoli",
+    "confianza": 96.3,
+    "acierto": false
+  },
+  {
+    "palabra": "cup",
+    "prediccion": "coffee cup",
+    "confianza": 72.2,
+    "acierto": false
+  },
+  {
+    "palabra": "house",
+    "prediccion": "house",
+    "confianza": 91.7,
+    "acierto": true
+  },
+  {
+    "palabra": "fish",
+    "prediccion": "fish",
+    "confianza": 74.4,
+    "acierto": true
+  },
+  {
+    "palabra": "star",
+    "prediccion": "star",
+    "confianza": 99.5,
+    "acierto": true
+  },
+  {
+    "palabra": "flower",
+    "prediccion": "flower",
+    "confianza": 99.7,
+    "acierto": true
+  },
+  {
+    "palabra": "book",
+    "prediccion": "book",
+    "confianza": 96.9,
+    "acierto": true
+  },
+  {
+    "palabra": "sun",
+    "prediccion": "sun",
+    "confianza": 74.4,
+    "acierto": true
+  },
+  {
+    "palabra": "moon",
+    "prediccion": "moon",
+    "confianza": 96.8,
+    "acierto": true
+  },
+  {
+    "palabra": "hat",
+    "prediccion": "hat",
+    "confianza": 90.3,
+    "acierto": true
+  },
+  {
+    "palabra": "shoe",
+    "prediccion": "shoe",
+    "confianza": 99.7,
+    "acierto": true
+  },
+  {
+    "palabra": "chair",
+    "prediccion": "chair",
+    "confianza": 100.0,
+    "acierto": true
+  },
+  {
+    "palabra": "key",
+    "prediccion": "key",
+    "confianza": 100.0,
+    "acierto": true
+  },
+  {
+    "palabra": "clock",
+    "prediccion": "clock",
+    "confianza": 45.3,
+    "acierto": true
+  },
+  {
+    "palabra": "guitar",
+    "prediccion": "guitar",
+    "confianza": 54.7,
+    "acierto": true
+  },
+  {
+    "palabra": "umbrella",
+    "prediccion": "umbrella",
+    "confianza": 99.9,
+    "acierto": true
+  },
+  {
+    "palabra": "bicycle",
+    "prediccion": "bicycle",
+    "confianza": 82.2,
+    "acierto": true
+  },
+  {
+    "palabra": "dog",
+    "prediccion": "dog",
+    "confianza": 81.2,
+    "acierto": true
+  },
+  {
+    "palabra": "bird",
+    "prediccion": "parrot",
+    "confianza": 49.1,
+    "acierto": false
+  },
+  {
+    "palabra": "snake",
+    "prediccion": "snake",
+    "confianza": 86.9,
+    "acierto": true
+  },
+  {
+    "palabra": "spider",
+    "prediccion": "spider",
+    "confianza": 98.3,
+    "acierto": true
+  },
+  {
+    "palabra": "butterfly",
+    "prediccion": "butterfly",
+    "confianza": 99.8,
+    "acierto": true
+  },
+  {
+    "palabra": "pizza",
+    "prediccion": "pizza",
+    "confianza": 100.0,
+    "acierto": true
+  },
+  {
+    "palabra": "cake",
+    "prediccion": "cake",
+    "confianza": 53.2,
+    "acierto": true
+  },
+  {
+    "palabra": "ice cream",
+    "prediccion": "ice cream",
+    "confianza": 99.8,
+    "acierto": true
+  },
+  {
+    "palabra": "banana",
+    "prediccion": "banana",
+    "confianza": 100.0,
+    "acierto": true
+  },
+  {
+    "palabra": "mushroom",
+    "prediccion": "mushroom",
+    "confianza": 99.7,
+    "acierto": true
+  },
+  {
+    "palabra": "airplane",
+    "prediccion": "airplane",
+    "confianza": 94.9,
+    "acierto": true
+  },
+  {
+    "palabra": "bus",
+    "prediccion": "school bus",
+    "confianza": 52.1,
+    "acierto": false
+  },
+  {
+    "palabra": "truck",
+    "prediccion": "truck",
+    "confianza": 50.4,
+    "acierto": true
+  },
+  {
+    "palabra": "boat",
+    "prediccion": "sailboat",
+    "confianza": 90.8,
+    "acierto": false
+  },
+  {
+    "palabra": "helicopter",
+    "prediccion": "helicopter",
+    "confianza": 99.5,
+    "acierto": true
+  },
+  {
+    "palabra": "sword",
+    "prediccion": "sword",
+    "confianza": 81.6,
+    "acierto": true
+  },
+  {
+    "palabra": "crown",
+    "prediccion": "crown",
+    "confianza": 91.4,
+    "acierto": true
+  },
+  {
+    "palabra": "diamond",
+    "prediccion": "diamond",
+    "confianza": 94.5,
+    "acierto": true
+  },
+  {
+    "palabra": "heart",
+    "prediccion": "strawberry",
+    "confianza": 40.1,
+    "acierto": false
+  },
+  {
+    "palabra": "lightning",
+    "prediccion": "lightning",
+    "confianza": 99.9,
+    "acierto": true
+  },
+  {
+    "palabra": "eye",
+    "prediccion": "eye",
+    "confianza": 100.0,
+    "acierto": true
+  },
+  {
+    "palabra": "hand",
+    "prediccion": "hand",
+    "confianza": 99.3,
+    "acierto": true
+  },
+  {
+    "palabra": "skull",
+    "prediccion": "skull",
+    "confianza": 98.2,
+    "acierto": true
+  },
+  {
+    "palabra": "tooth",
+    "prediccion": "canoe",
+    "confianza": 45.7,
+    "acierto": false
+  },
+  {
+    "palabra": "ear",
+    "prediccion": "ear",
+    "confianza": 100.0,
+    "acierto": true
+  },
+  {
+    "palabra": "door",
+    "prediccion": "door",
+    "confianza": 98.2,
+    "acierto": true
+  },
+  {
+    "palabra": "window",
+    "prediccion": "dresser",
+    "confianza": 47.5,
+    "acierto": false
+  },
+  {
+    "palabra": "ladder",
+    "prediccion": "stairs",
+    "confianza": 99.3,
+    "acierto": false
+  },
+  {
+    "palabra": "bridge",
+    "prediccion": "bridge",
+    "confianza": 94.9,
+    "acierto": true
+  },
+  {
+    "palabra": "fence",
+    "prediccion": "fence",
+    "confianza": 90.2,
+    "acierto": true
+  },
+  {
+    "palabra": "pencil",
+    "prediccion": "pencil",
+    "confianza": 99.2,
+    "acierto": true
+  },
+  {
+    "palabra": "scissors",
+    "prediccion": "scissors",
+    "confianza": 99.6,
+    "acierto": true
+  },
+  {
+    "palabra": "envelope",
+    "prediccion": "envelope",
+    "confianza": 89.6,
+    "acierto": true
+  },
+  {
+    "palabra": "candle",
+    "prediccion": "candle",
+    "confianza": 99.8,
+    "acierto": true
+  },
+  {
+    "palabra": "camera",
+    "prediccion": "camera",
+    "confianza": 99.6,
+    "acierto": true
+  },
+  {
+    "palabra": "mountain",
+    "prediccion": "mountain",
+    "confianza": 100.0,
+    "acierto": true
+  },
+  {
+    "palabra": "cloud",
+    "prediccion": "cloud",
+    "confianza": 99.3,
+    "acierto": true
+  },
+  {
+    "palabra": "tornado",
+    "prediccion": "tornado",
+    "confianza": 81.5,
+    "acierto": true
+  },
+  {
+    "palabra": "snowflake",
+    "prediccion": "snowflake",
+    "confianza": 99.9,
+    "acierto": true
+  },
+  {
+    "palabra": "rainbow",
+    "prediccion": "rainbow",
+    "confianza": 99.9,
+    "acierto": true
+  }
+]
